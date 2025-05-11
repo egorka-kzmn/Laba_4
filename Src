@@ -1,0 +1,57 @@
+// Практическая 1
+fun main() {
+    for (i in (1..5)){
+        println("$i".repeat(i))
+    }
+}
+
+//Практическая 2
+fun main() {
+    var a = readln().toInt()
+    var b = (1..9).random()
+    while(a != b){
+        print("Не угадал!")
+        a = readln().toInt()
+        b = (1..9).random()
+    }
+}
+
+//Практическая 3
+fun main() {
+    val i = readln().toInt()
+    for (j in (1..i)){
+        print(if(i % j == 0){"$j${if(j != i){", "}else{""}}"}else{""})
+    }
+}
+
+//Практическая 4
+fun main() {
+    var even = 0
+    var odd = 0
+    for (i in readln()){
+        if (i.digitToInt() % 2 == 0) even++ else odd++
+    }
+    println("Четных: $even, нечетных: $odd")
+}
+
+//Практическая 5
+fun main() {
+    var res = 0
+    for (i in (4..100 step 4)){
+        res+=i
+    }
+    println(res)
+}
+
+//Практическая 6
+fun main() {
+    var i = 5
+    var res = 0
+    while(i <= 57){
+        if(i!=34 && i!=46 && i!=52){
+            res += i
+        }
+        i++
+    }
+    println(res)
+}
